@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素周期表</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .periodic-table {
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        gap: 10px;
+        margin: px;
+      }
+      .element {
+        border: 2px solid #511d81;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .element.selected {
+        background-color: rgba(191, 186, 233, 0.623);
+        color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      style="
+        background-color: rgba(191, 186, 233, 0.329);
+        padding: 40px;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <img
+        src="http://oa.iphy.ac.cn/page/resource/userfile/image/ioplogo.jpg"
+        alt="E01 loge"
+        width="90px auto"
+      />
+      <p style="text-align: center">
+        Predicted MSD database of High Enthopy Li<sub>3</sub
+        ><span style="color: rgb(140, 0, 255)">Zr</span
+        ><sub>2</sub>Si<sub>2</sub>PO<sub>12</sub> solid electrolytes
+      </p>
+      <img
+        src="https://e01.iphy.ac.cn/sites/default/files/logo.png"
+        alt="E01 loge"
+        width="90px auto"
+      />
+    </h1>
+    <h2 style="text-align: center">元素周期表</h2>
+    <div class="periodic-table">
+      <div class="element" data-element="H">H<br />氢</div>
+      <div class="element" data-element="He">He<br />氦</div>
+      <div class="element" data-element="Li">Li<br />锂</div>
+      <div class="element" data-element="Be">Be<br />铍</div>
+      <div class="element" data-element="B">B<br />硼</div>
+      <div class="element" data-element="C">C<br />碳</div>
+      <div class="element" data-element="N">N<br />氮</div>
+      <div class="element" data-element="O">O<br />氧</div>
+      <div class="element" data-element="F">F<br />氟</div>
+      <div class="element" data-element="Ne">Ne<br />氖</div>
+      <!-- 可以继续添加其他元素 -->
+    </div>
+
+    <script>
+      const elements = document.querySelectorAll(".element");
+
+      elements.forEach((element) => {
+        element.addEventListener("click", () => {
+          element.classList.toggle("selected");
+        });
+      });
+    </script>
+  </body>
+</html>
